@@ -34,7 +34,7 @@ body {
     background-color: rgb(0, 225, 255);
 }
 
-.wizzard {
+.wizard {
     position: absolute;
     background-image: url(../images/wizard.png) ;  
     /* ('images/wizard.png') */

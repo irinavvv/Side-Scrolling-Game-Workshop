@@ -1,11 +1,20 @@
 function start (state, game) {
-    game.createWizard(state.wizzard);
+    game.createWizard(state.wizard);
 
     window.requestAnimationFrame(gameLoop.bind(null, state, game))
 
 }
 
 function gameLoop(state, game) {
-console.log(state.keys);
+    const {wizard} = state;
+    const {wizardEl} = game;
+// move  wizard
+if (state.keys.KeyD) {
+    wizard.posX += 2;
+}
+
+//render game
+wizardEl.style.left = state.wizard.posX + "px"
+
 window.requestAnimationFrame(gameLoop.bind(null, state, game));
 }

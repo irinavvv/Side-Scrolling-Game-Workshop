@@ -7,12 +7,12 @@ return {
     createWizard(initState){
 
         let  wizardEl = document.createElement("div")
-        wizardEl.classList.add("wizzard")
+        wizardEl.classList.add("wizard")
         wizardEl.style.height = initState.height + "px"
         wizardEl.style.width = initState.width + "px"
 
-        wizardEl.style.left = initState.startX + "px"
-        wizardEl.style.top = initState.startY + "px"
+        wizardEl.style.left = initState.posX + "px"
+        wizardEl.style.top = initState.posY + "px"
 
         this.wizardEl = wizardEl
         gameScreen.appendChild(wizardEl)
