@@ -10,12 +10,20 @@ function gameLoop(state, game) {
     const {wizardEl} = game;
 
 // move  wizard
+if (state.keys.KeyA) {
+    wizard.posX -= wizard.speed;
+}
+
+if (state.keys.KeyS) {
+    wizard.posY += wizard.speed;
+}
+
 if (state.keys.KeyD) {
-    wizard.posX += 10;
+    wizard.posX += wizard.speed;
 }
 
 if (state.keys.KeyW) {
-    wizard.posY -= 10;
+    wizard.posY -= wizard.speed;
 }
 //render game
 wizardEl.style.left = state.wizard.posX + "px"
